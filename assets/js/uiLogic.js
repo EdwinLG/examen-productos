@@ -20,11 +20,19 @@ function printProducts(){
             productCell = row.insertCell(1),
             countCell = row.insertCell(2),
             descripCell = row.insertCell(3);
+            selectCell = row.insertCell(4);
         
             codeCell.innerHTML = list[i].code;
             productCell.innerHTML = list[i].product;
             countCell.innerHTML = list[i].count;
             descripCell.innerHTML = list[i].descrip;
+
+            var inputSelect= document.createElement('button');
+            inputSelect.type ='button';
+            inputSelect.innerHTML="X";
+            inputSelect.value= list[i].code;
+            inputSelect.style = 'border: 1px solid blue; background-color: #008CBA; color:white;';
+            selectCell.appendChild(inputSelect);
 
         tbody.appendChild(row);
     }
