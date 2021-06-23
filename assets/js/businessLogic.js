@@ -10,3 +10,7 @@ function addproductToSystem(pcode, pproduct,pcount,pdescrip){
     console.log(newproduct);
     Listproducts.push(newproduct);
 }
+
+function getListproducts(){
+    return Listproducts;
+}
