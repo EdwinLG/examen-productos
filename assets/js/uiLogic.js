@@ -2,6 +2,10 @@ document.querySelector('#btnadd').addEventListener('click',productadd);
 
 
 printProducts();
+formulario = document.querySelector("#txtsearch");
+formulario.addEventListener("keyup",searchList)
+
+
 function productadd(){
     var scode = document.querySelector('#txtcode').value,
     sproduct = document.querySelector('#txtproduct').value,
@@ -18,7 +22,7 @@ function printProducts(){
 
     for(var i=0; i<list.length;i++){
         
-        var row = tbody.insertRow(i),
+            var row = tbody.insertRow(i),
             codeCell = row.insertCell(0),
             productCell = row.insertCell(1),
             countCell = row.insertCell(2),
