@@ -1,4 +1,6 @@
 document.querySelector('#btnadd').addEventListener('click',productadd);
+
+
 printProducts();
 function productadd(){
     var scode = document.querySelector('#txtcode').value,
@@ -15,6 +17,7 @@ function printProducts(){
     tbody.innerHTML="";
 
     for(var i=0; i<list.length;i++){
+        
         var row = tbody.insertRow(i),
             codeCell = row.insertCell(0),
             productCell = row.insertCell(1),
