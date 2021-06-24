@@ -7,7 +7,7 @@ function addproductToSystem(pcode, pproduct,pcount,pdescrip){
         count : pcount,
         descrip : pdescrip
     };
-    //console.log(newproduct);
+    console.log(newproduct);
     Listproducts.push(newproduct);
     LocalStorageListproducts(Listproducts);
 }
@@ -25,3 +25,4 @@ function getListproducts(){
 function LocalStorageListproducts(plist){
     localStorage.setItem('LocalListproducts', JSON.stringify(plist));
 }
+

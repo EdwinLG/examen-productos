@@ -30,11 +30,17 @@ function printProducts(){
             var inputSelect= document.createElement('button');
             inputSelect.type ='button';
             inputSelect.innerHTML="X";
-            inputSelect.value= list[i].code;
-            inputSelect.style = 'border: 1px solid blue; background-color: #008CBA; color:white;';
-            selectCell.appendChild(inputSelect);
 
+            inputSelect.value= list[i].code;
+            inputSelect.className= "btn btn-danger";
+            selectCell.appendChild(inputSelect);
+            inputSelect.addEventListener("click",(event) =>{
+                event.target.parentNode.parentNode.remove(),
+                localStorage.clear();
+            })
         tbody.appendChild(row);
+        
+
     }
 
 }
